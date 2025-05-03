@@ -1,16 +1,17 @@
 # app.py
+
 import streamlit as st
 import pandas as pd
 
 # --- Page Config ---
 st.set_page_config(
     page_title="Happy Rides - Inventory Dashboard",
-    page_icon="🚗",
+    page_icon="🚘",
     layout="wide",
 )
 
 # --- Title & Dealer Info ---
-st.title("🚗 Happy Rides - Inventory Management Dashboard")
+st.title("🚘 Happy Rides - Inventory Management Dashboard")
 st.subheader("Authorized Dealer: Bounce 1 Electric Pvt Ltd")
 
 # --- Company Info Table ---
@@ -24,10 +25,7 @@ company_info = {
         'AAQFH2709F'
     ]
 }
-company_df = pd.DataFrame(company_info)
-st.table(company_df)
-
-st.divider()
+st.table(pd.DataFrame(company_info))
 
 # --- Locations & Agents ---
 st.subheader("📍 Locations & Agents")
